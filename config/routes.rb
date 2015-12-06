@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'sega/session', to: 'sega#session', as: 'sega_session'
-  post 'sega/session', to: 'sega#login', as: 'sega_login'
+  get 'sega/session', to: 'sega#session', as: 'sega_session', format: 'json'
+  post 'sega/session', to: 'sega#login', as: 'sega_login', format: 'json'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
