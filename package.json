@@ -1,0 +1,27 @@
+{
+  "name": "my-chunithm-net",
+  "version": "1.0.0",
+  "description": "my chunithm net",
+  "main": "server.js",
+  "engines": {
+    "node": "4.2.0",
+    "npm": "3.3.6"
+  },
+  "scripts": {
+    "postinstall": "cd client && npm install",
+    "test": "rspec && (cd client && npm run lint)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gomachan46/my-chunithm-net.git"
+  },
+  "keywords": [
+    "react",
+    "tutorial",
+    "comment",
+    "example"
+  ],
+  "author": "gomachan46",
+  "license": "MIT",
+  "dependencies": {}
+}

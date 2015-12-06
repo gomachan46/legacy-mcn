@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'hello_world', to: 'hello_world#index'
+  get 'hello_world', to: 'hello_world#index'
+  get 'hello_world', to: 'hello_world#index'
   get 'sega/session', to: 'sega#session', as: 'sega_session', format: 'json'
   post 'sega/session', to: 'sega#login', as: 'sega_login', format: 'json'
 

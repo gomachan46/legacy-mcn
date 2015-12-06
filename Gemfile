@@ -26,6 +26,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'faraday'
 gem 'faraday_middleware'
 
+gem "react_on_rails"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -48,3 +50,6 @@ group :development do
   gem 'spring'
 end
 
+
+gem 'therubyracer', platforms: :ruby
+gem 'bootstrap-sass'
