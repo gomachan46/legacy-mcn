@@ -14,9 +14,9 @@ class Chunithm extends Component {
         const { login, loginActions, profile, profileActions, musicList, musicListActions } = this.props
         return (
             <div>
-                <Login {...login} {...loginActions} />
-                <Profile {...profile} />
-                <MusicList {...musicList} {...musicListActions} />
+                <Login {...{login, loginActions}} />
+                <Profile {...profile, profileActions}} />
+                <MusicList {...musicList, musicListActions}} />
             </div>
         )
     }
