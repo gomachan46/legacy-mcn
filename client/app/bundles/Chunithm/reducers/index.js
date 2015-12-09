@@ -1,7 +1,7 @@
-import profile from './profile';
-import musicList from './musicList';
-import music from './music';
-import login from './login';
+import profile, { initialState as profileState } from './profile';
+import musicList, { initialState as musicListState } from './musicList';
+import music, { initialState as musicState } from './music';
+import login, { initialState as loginState } from './login';
 
 export default {
     login: login,
@@ -11,5 +11,8 @@ export default {
 };
 
 export const initialStates = {
-    login
+    profileState,
+    musicListState,
+    musicState,
+    loginState
 };

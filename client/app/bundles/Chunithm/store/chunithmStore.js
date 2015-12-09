@@ -5,12 +5,13 @@ import reducers, { initialStates } from '../reducers'
 
 export default props => {
     const { name } = props;
-    const { state } = initialStates;
+    const { profileState, musicListState, musicState, loginState } = initialStates;
 
     const initialState = {
-        store: state.merge({
-            name: name
-        })
+        profile: profileState,
+        musicList: musicListState,
+        music: musicState,
+        login: loginState
     };
 
     const reducer = combineReducers(reducers);

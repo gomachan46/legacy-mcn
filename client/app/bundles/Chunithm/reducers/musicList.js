@@ -124,7 +124,7 @@ export const initialState = Immutable.fromJS({
 function getMusic(id) {
     switch (id) {
         case 0:
-            return {
+            return Immutable.fromJS({
                 id: id,
                 name: "天体観測",
                 artist: "dj yoshitaka",
@@ -142,9 +142,9 @@ function getMusic(id) {
                         updateDate: "2015-07-23 22:02:49.0"
                     }
                 ]
-            };
+            });
         case 3:
-            return {
+            return Immutable.fromJS({
                 id: id,
                 name: "B.B.K.K.B.K.K",
                 artist: "dj yoshitaka",
@@ -162,9 +162,9 @@ function getMusic(id) {
                         updateDate: "2015-07-23 22:02:49.0"
                     }
                 ]
-            };
+            });
         case 203:
-            return {
+            return Immutable.fromJS({
                 id: id,
                 name: "flower",
                 artist: "dj yoshitaka",
@@ -182,9 +182,9 @@ function getMusic(id) {
                         updateDate: "2015-07-23 22:02:49.0"
                     }
                 ]
-            };
+            });
         default:
-            return null;
+            return Immutable.fromJS({});
     }
 }
 

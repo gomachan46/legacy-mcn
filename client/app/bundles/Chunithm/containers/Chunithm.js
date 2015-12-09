@@ -11,12 +11,13 @@ import Immutable from 'immutable';
 
 class Chunithm extends Component {
     render() {
-        const { login, loginActions, profile, profileActions, musicList, musicListActions } = this.props
+        const { login, profile, musicList } = this.props;
+        const { loginActions, profileActions, musicListActions } = this.props;
         return (
             <div>
-                <Login {...{login, loginActions}} />
-                <Profile {...profile, profileActions}} />
-                <MusicList {...musicList, musicListActions}} />
+                <Login {...login} {...loginActions} />
+                <Profile {...profile} {...profileActions} />
+                <MusicList {...musicList} {...musicListActions} />
             </div>
         )
     }
@@ -26,16 +27,16 @@ Chunithm.propTypes = {
     loginActions: PropTypes.object.isRequired,
     profileActions: PropTypes.object.isRequired,
     musicListActions: PropTypes.object.isRequired,
-    login: PropTypes.instanceOf(Immutable.map).isRequired,
-    profile: PropTypes.instanceOf(Immutable.map).isRequired,
-    musicList: PropTypes.instanceOf(Immutable.map).isRequired
+    login: PropTypes.object.isRequired,
+    profile: PropTypes.object.isRequired,
+    musicList: PropTypes.object.isRequired
 };
 
 function mapStateToProps(state) {
     return {
-        login: state.login,
-        profile: state.profile,
-        musicList: state.musicList
+        login: state.login.toJS(),
+        profile: state.profile.toJS(),
+        musicList: state.musicList.toJS()
     }
 }
 
